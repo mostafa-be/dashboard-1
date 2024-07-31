@@ -7,13 +7,15 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import Link from "next/link";
 import Image from "next/image";
 
-type Props = {};
+type Props = {
+  setAuth: (auth: number) => void;
+};
 
-const Login = (props: Props) => {
+const Login = ({ setAuth }: Props) => {
   const [show, setShow] = useState(false);
   return (
     <div className="w-full h-full bg-transparent 800px:w-1/2">
-      <div className="w-full flex flex-col items-center justify-center px-6 800px:px-20">
+      <div className="w-full h-full flex flex-col items-center justify-center px-6 800px:px-20">
         <div className="w-full">
           <h1 className="text-lg 800px:text-2xl text-black font-[500] capitalize">
             get started now
@@ -90,7 +92,10 @@ const Login = (props: Props) => {
           </div>
         </div>
         <div className="w-full flex items-center py-2 justify-end">
-          <span className="text-sm font-[500] text-blue-600">
+          <span
+            className="text-sm font-[500] text-blue-600 cursor-pointer"
+            onClick={() => setAuth(2)}
+          >
             Forgot password?
           </span>
         </div>
@@ -116,8 +121,9 @@ const Login = (props: Props) => {
           </div>
         </div>
         <div className="w-full mt-5">
-          <span className="text-sm text-[600] text-black">
-            Have an account ? <span className="text-blue-600">sign in</span>
+          <span className="text-sm font-[500] text-black">
+            Have an account ?{" "}
+            <span className="text-blue-600 cursor-pointer">sign in</span>
           </span>
         </div>
       </div>

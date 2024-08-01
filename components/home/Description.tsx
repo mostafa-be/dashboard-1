@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
-import bus from "../public/assests/hero image/business-planning-sketch-concept.png";
+import bus from "../../public/assests/hero image/business-planning-sketch-concept.png";
 
 type Props = {};
 

@@ -1,11 +1,12 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: ["class"],
   theme: {
     extend: {
       fontFamily: {
@@ -23,15 +24,11 @@ const config: Config = {
         "1200px": "1200px",
         "1300px": "1300px",
         "1500px": "1500px",
-        "900px": "900px",
         "800px": "800px",
-        "700px": "700px",
-        "600px": "600px",
-        "500px": "500px",
         "400px": "400px",
       }
     },
   },
   plugins: [],
-};
-export default config;
+}
+export default config

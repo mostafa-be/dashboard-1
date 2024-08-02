@@ -12,6 +12,9 @@ import {
   Lightbulb,
 } from "lucide-react";
 import SideBar, { SideBarItem } from "@/components/Lyaout/SideBar";
+import Header from "@/components/Lyaout/Header";
+import DashboardContent from "../../components/Dashboard/DashboardContent";
+
 type Props = {};
 
 const Page = (props: Props) => {
@@ -23,14 +26,14 @@ const Page = (props: Props) => {
         description="When MIP processes a Distribution or Product-combined feed and finds a description template name in the TemplateName field, it uses the description template instead of the standard eBay description file to display the listing. If there is data in the CustomFields field, it pulls the Value part of the Key-value pair in the product feed into the description template, and displays that data in the listing"
         keywords="Template,HTMl,Shopif,E-Commerce,WooCommerce,Wordpress,Google,React,Next,Node Js,Programming"
       />
-      <div className="w-full min-h-scren  bg-slate-100 flex items-center justify-start">
+      <div className="w-full   bg-slate-100 flex items-start justify-start">
         <SideBar expanded={expanded} setExpanded={setExpanded}>
           <SideBarItem
             icon={<LayoutDashboard size={20} />}
             text="Dashboard"
             active={true}
             link={false}
-            url={"/dashboard"}
+            url={"dashboard"}
             alert={false}
           />
           <SideBarItem
@@ -38,7 +41,7 @@ const Page = (props: Props) => {
             text="Projects"
             active={false}
             link={false}
-            url={"/projects"}
+            url={"projects"}
             alert={false}
           />
           <SideBarItem
@@ -46,7 +49,7 @@ const Page = (props: Props) => {
             text="Transactions"
             active={false}
             link={false}
-            url={"/transactions"}
+            url={"transactions"}
             alert={false}
           />
           <SideBarItem
@@ -54,7 +57,7 @@ const Page = (props: Props) => {
             text="My Team"
             active={false}
             link={false}
-            url={"/team"}
+            url={"team"}
             alert={false}
           />
           <SideBarItem
@@ -62,7 +65,7 @@ const Page = (props: Props) => {
             text="Research Data"
             active={false}
             link={false}
-            url={"/research-data"}
+            url={"research-data"}
             alert={false}
           />
           <SideBarItem
@@ -70,7 +73,7 @@ const Page = (props: Props) => {
             text="Reports"
             active={false}
             link={false}
-            url={"/reports"}
+            url={"reports"}
             alert={false}
           />
           <hr className="w-full my-2" />
@@ -79,7 +82,7 @@ const Page = (props: Props) => {
             text="settings"
             active={false}
             link={false}
-            url={"/settings"}
+            url={"settings"}
             alert={false}
           />
           <SideBarItem
@@ -87,10 +90,18 @@ const Page = (props: Props) => {
             text="Help"
             active={false}
             link={false}
-            url={"/help"}
+            url={"help"}
             alert={false}
           />
         </SideBar>
+        <div className="w-full h-full flex flex-col items-start justify-center mt-auto">
+          <Header
+            title="Dashboard"
+            expanded={expanded}
+            setExpanded={setExpanded}
+          />
+          <DashboardContent />
+        </div>
       </div>
     </div>
   );

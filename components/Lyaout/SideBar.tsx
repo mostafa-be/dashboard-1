@@ -17,7 +17,7 @@ const SideBar = ({ expanded, setExpanded, children }: PropsSidebar) => {
   return (
     <aside
       className={`border-t ${
-        expanded ? "h-screen  " : "hidden 800px:block 800px:h-screen "
+        expanded ? "h-screen  " : "hidden 800px:block h-screen "
       } w-min fixed left-0  z-50 800px:sticky top-0 `}
     >
       <nav

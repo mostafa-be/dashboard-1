@@ -5,6 +5,7 @@ type Props = {};
 const AnalyticsProjects = (props: Props) => {
   const option: any = {
     chart: {
+      width: 700,
       height: 350,
       type: "bar",
     },
@@ -80,7 +81,6 @@ const AnalyticsProjects = (props: Props) => {
         <ApexChart
           type="bar"
           height={350}
-          width={"100%"}
           options={option}
           series={series}
           className="w-full"

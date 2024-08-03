@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Heading from "../utils/Heading";
 import {
   LayoutDashboard,
   ChartSpline,
@@ -13,7 +12,8 @@ import {
 } from "lucide-react";
 import SideBar, { SideBarItem } from "@/components/Lyaout/SideBar";
 import Header from "@/components/Lyaout/Header";
-import DashboardContent from "../../components/Dashboard/DashboardContent";
+import Heading from "@/app/utils/Heading";
+import TransactionsContent from "../../../components/Transaction/TransactionsContent"
 
 type Props = {};
 
@@ -22,7 +22,7 @@ const Page = (props: Props) => {
   return (
     <div>
       <Heading
-        title={`Dashboard`}
+        title={`Transactions`}
         description="When MIP processes a Distribution or Product-combined feed and finds a description template name in the TemplateName field, it uses the description template instead of the standard eBay description file to display the listing. If there is data in the CustomFields field, it pulls the Value part of the Key-value pair in the product feed into the description template, and displays that data in the listing"
         keywords="Template,HTMl,Shopif,E-Commerce,WooCommerce,Wordpress,Google,React,Next,Node Js,Programming"
       />
@@ -31,7 +31,7 @@ const Page = (props: Props) => {
           <SideBarItem
             icon={<LayoutDashboard size={20} />}
             text="Dashboard"
-            active={true}
+            active={false}
             link={false}
             url={"dashboard"}
             alert={false}
@@ -47,7 +47,7 @@ const Page = (props: Props) => {
           <SideBarItem
             icon={<ReceiptEuro size={20} />}
             text="Transactions"
-            active={false}
+            active={true}
             link={false}
             url={"dashboard/transactions"}
             alert={false}
@@ -94,13 +94,13 @@ const Page = (props: Props) => {
             alert={false}
           />
         </SideBar>
-        <div className="w-full h-full flex flex-col items-start justify-center mt-auto">
+        <div className="w-full  flex flex-col items-start justify-center mt-auto">
           <Header
-            title="Dashboard"
+            title="Transactions"
             expanded={expanded}
             setExpanded={setExpanded}
-          />
-          <DashboardContent />
+                  />
+                  <TransactionsContent/>
         </div>
       </div>
     </div>

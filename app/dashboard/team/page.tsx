@@ -96,7 +96,7 @@ const Page = (props: Props) => {
         </SideBar>
         <div className="w-full  flex flex-col items-start justify-center mt-auto">
           <Header
-            title="Projects"
+            title="Team"
             expanded={expanded}
             setExpanded={setExpanded}
           />

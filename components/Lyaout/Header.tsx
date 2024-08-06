@@ -5,6 +5,7 @@ import {
   MessageSquareText,
   Search,
   Settings,
+  SquareChevronRight,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -21,6 +22,7 @@ type Props = {
 
 const Header = ({ title, expanded, setExpanded }: Props) => {
   const [active, SetActive] = useState(false);
+  const [show, setShow] = useState(false);
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 80) {
@@ -73,9 +75,40 @@ const Header = ({ title, expanded, setExpanded }: Props) => {
             />
           </div>
           <ThemeSwitcher />
-          <div className="flex items-center justify-end relative p-2 bg-zinc-200 rounded-full pointer">
-            <MessageSquareText className="text-white/90" />
+          <div className="flex items-center justify-end relative p-2 bg-zinc-200 rounded-full  cursor-pointer">
+            <MessageSquareText
+              className="text-white/90"
+              onClick={() => setShow(!show)}
+            />
             <span className="p-1 text-center rounded-full bg-green-500 text-white  absolute top-1 right-1.5"></span>
+            {show && (
+              <div className=" z-40 absolute overflow-scroll top-14  w-60  bg-white h-72 rounded-lg px-2 py-2 ">
+                <div className="w-full  cursor-pointer py-3 px-2 transition-colors hover:bg-slate-100 rounded flex items-center justify-start gap-3">
+                  <SquareChevronRight size={20} className="text-green-700" />
+                  <span className="text-sm font-semibold">Create Project</span>
+                </div>
+                <div className="w-full  cursor-pointer py-3 px-2 transition-colors hover:bg-slate-100 rounded flex items-center justify-start gap-3">
+                  <SquareChevronRight size={20} className="text-green-700" />
+                  <span className="text-sm font-semibold">Create Project</span>
+                </div>
+                <div className="w-full  cursor-pointer py-3 px-2 transition-colors hover:bg-slate-100 rounded flex items-center justify-start gap-3">
+                  <SquareChevronRight size={20} className="text-green-700" />
+                  <span className="text-sm font-semibold">Create Project</span>
+                </div>
+                <div className="w-full  cursor-pointer py-3 px-2 transition-colors hover:bg-slate-100 rounded flex items-center justify-start gap-3">
+                  <SquareChevronRight size={20} className="text-green-700" />
+                  <span className="text-sm font-semibold">Create Project</span>
+                </div>
+                <div className="w-full  cursor-pointer py-3 px-2 transition-colors hover:bg-slate-100 rounded flex items-center justify-start gap-3">
+                  <SquareChevronRight size={20} className="text-green-700" />
+                  <span className="text-sm font-semibold">Create Project</span>
+                </div>
+                <div className="w-full  cursor-pointer py-3 px-2 transition-colors hover:bg-slate-100 rounded flex items-center justify-start gap-3">
+                  <SquareChevronRight size={20} className="text-green-700" />
+                  <span className="text-sm font-semibold">Create Project</span>
+                </div>
+              </div>
+            )}
           </div>
           <div className="flex items-center gap-3">
             <Image
@@ -83,7 +116,9 @@ const Header = ({ title, expanded, setExpanded }: Props) => {
               alt="avatar"
               className="overflow-hidden transition-all rounded-full w-10"
             />
-            <span className="text-black hidden 800px:block text-sm font-semibold">John Smith</span>
+            <span className="text-black hidden 800px:block text-sm font-semibold">
+              John Smith
+            </span>
           </div>
         </div>
       </div>

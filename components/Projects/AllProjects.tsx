@@ -71,6 +71,41 @@ const AllProjects = ({ expanded }: Props) => {
       status: "Private",
       budget: "$ 300",
     },
+    {
+      id: "2",
+      title: " Dashboard Ecommerce",
+      date: "22/06/2024",
+      status: "Private",
+      budget: "$ 300",
+    },
+    {
+      id: "3",
+      title: " Dashboard Ecommerce",
+      date: "22/06/2024",
+      status: "Private",
+      budget: "$ 300",
+    },
+    {
+      id: "4",
+      title: " Dashboard Ecommerce",
+      date: "22/06/2024",
+      status: "Private",
+      budget: "$ 300",
+    },
+    {
+      id: "5",
+      title: " Dashboard Ecommerce",
+      date: "22/06/2024",
+      status: "Private",
+      budget: "$ 300",
+    },
+    {
+      id: "6",
+      title: " Dashboard Ecommerce",
+      date: "22/06/2024",
+      status: "Private",
+      budget: "$ 300",
+    },
   ];
 
   {
@@ -99,7 +134,7 @@ const AllProjects = ({ expanded }: Props) => {
         m="40px 0 0 0"
         className={`shadow ${
           expanded
-            ? "800px:max-w-screen-500px 1000px:max-w-screen-700px 1100px:max-w-screen-800px 1200px:max-w-screen-900px 1300px:max-w-screen-1000px 1500px:min-w-full "
+            ? "800px:max-w-screen-500px 1000px:max-w-screen-700px 1100px:max-w-screen-800px 1200px:max-w-screen-900px 1300px:max-w-screen-1000px 1500px:min-w-full"
             : "  w-full"
         }`}
         sx={{

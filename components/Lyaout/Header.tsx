@@ -60,7 +60,7 @@ const Header = ({ title, expanded, setExpanded }: Props) => {
         </div>
 
         <div className="flex items-center justify-end gap-6">
-          <div className="flex items-center">
+          <div className=" items-center  hidden 800px:flex">
             <div className="h-[40px] rounded-l-full flex items-center w-[50px] bg-zinc-200 pl-3">
               <Search className="text-gray-800" />
             </div>
